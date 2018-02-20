@@ -1,0 +1,111 @@
+<!-- 1. Your survey should have 10 questions of your choosing. 
+    Each answer should be on a scale of 1 to 5 based on how much 
+    the user agrees or disagrees with a question. -->
+
+<html>
+    <head>        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    </head>
+    <body>
+        <div class=container>
+            <br>
+            <h1>Survey Questions</h1>
+            <br>
+            <h3>About You:</h3>
+            <br>
+            <label for="name">Name</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="name" aria-describedby="basic-addon3">
+            </div>
+            <label for="img-url">Link to Photo Image</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="img-url" aria-describedby="basic-addon3">
+            </div>
+            <br>
+
+            <h3>Questions:</h3>
+            <br>
+
+            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>You rarely do something just out of sheer curiosity.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>People can rarely upset you.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>You rarely get carried away by fantasies and ideas.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <h4>You feel more energetic after spending time with a group of people.</h4>
+            <!-- <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Select An Option
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">1(Strongly Disagree)</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5(Strongly Agree)</a></li>
+                </ul>
+            </div> -->
+            <div class="rateYo" data-rateyo-full-star="true"></div>
+            <p>(1 star - Disagree, 5 stars - Agree)</p>
+            <br>
+            <button type="button" id='getRating' class="btn btn-default">Submit</button>
+
+            <script>
+                $(function () {
+                    $(".rateYo").rateYo({
+                        starWidth: "30px",
+                        // fullstar: true,
+                    });
+                });
+                // $("#rateYo").rateYo("option", "fullStar", true); //returns a jQuery Element
+                
+                $(function () {
+                    //   var $rateYo = $("#rateYo").rateYo();
+                      $("#getRating").click(function () {
+                        /* get rating */
+                        var rating = $(".rateYo").rateYo("option", "rating");
+                        window.alert("Its " + rating + " Yo!");
+                      });
+                });
+            </script>
+        </div>
+    </body>
+</html>

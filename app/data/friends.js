@@ -1,20 +1,20 @@
-// 5. You should save your application's data inside of `app/data/friends.js` 
-// as an array of objects. Each of these objects should roughly follow the format below.
+var friendsArray = 
+[
+    {
+        "name":"Anastasia",
+        "photo":"http://disneyinfo.r6tzsfwiwsoza41pdxk.maxcdn-edge.com/wp-content/uploads/2017/12/anastasia.png",
+        "scores":[3,3,3,3,3,3,3,3,3,3]
+    },
+    {
+        "name":"Masha",
+        "photo":"http://disneyinfo.r6tzsfwiwsoza41pdxk.maxcdn-edge.com/wp-content/uploads/2017/12/anastasia.png",
+        "scores":[1,1,1,1,1,1,1,1,1,1]
+    },
+    {
+        "name":"Katya",
+        "photo":"http://disneyinfo.r6tzsfwiwsoza41pdxk.maxcdn-edge.com/wp-content/uploads/2017/12/anastasia.png",
+        "scores":[5,5,5,5,5,5,5,5,5,5]
+    }
+];
 
-// json
-// {
-//   "name":"Ahmed",
-//   "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-//   "scores":[
-//       5,
-//       1,
-//       4,
-//       4,
-//       5,
-//       1,
-//       2,
-//       5,
-//       4,
-//       1
-//     ]
-// }
+module.exports = friendsArray; 

@@ -5,10 +5,45 @@
         <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            a{
+                font-size: 14px;
+                margin: 10px;
+            }
+            #getFriendsList{
+                border-right: 1px solid white;
+                padding-right: 20px;
+            }
+            .btn-primary{
+                padding: 15px;
+                background-color: #00bc8c;
+                font-size: 20px;
+            }
+            footer{
+                border-top: 1px solid white;
+                margin-top: 30px;
+                padding-top: 15px;
+            }
+            .huge{
+                font-size: 60px;
+            }
+        </style>
     </head>
     <body>
         <h1>
-            Hello world
+            <div class=container>
+                <br>
+                <h1 class=huge>Friend Finder</h1>
+                <br>
+                <p>Answer a few basic questions.</p>
+                <p>Then find the friend with the greatest compatibility!</p>
+                <br>
+                <a href="/survey" id='getSurvey' class="btn btn-primary">Go To Survey</a>
+                <footer>
+                    <a href="/api/friends" id="getFriendsList">API Friends List </a>
+                    <a href='https://github.com/AnastasiaFef/friend_finder' id="getGithub">GitHub Repo</a>
+                </footer>
+            </div>
         </h1>
     </body>
 </html>

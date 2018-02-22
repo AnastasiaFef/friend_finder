@@ -7,12 +7,12 @@ var friendsArray =
     },
     {
         "name":"Masha",
-        "photo":"http://disneyinfo.r6tzsfwiwsoza41pdxk.maxcdn-edge.com/wp-content/uploads/2017/12/anastasia.png",
+        "photo":"https://is4-ssl.mzstatic.com/image/thumb/Purple127/v4/54/da/bf/54dabf71-a63a-3006-2953-ca96fe64a5f1/mzl.bxmtfnuj.jpg/600x600bf.jpg",
         "scores":[1,1,1,1,1,1,1,1,1,1]
     },
     {
         "name":"Katya",
-        "photo":"http://disneyinfo.r6tzsfwiwsoza41pdxk.maxcdn-edge.com/wp-content/uploads/2017/12/anastasia.png",
+        "photo":"http://i5.lisimg.com/5764835/280full.jpg",
         "scores":[5,5,5,5,5,5,5,5,5,5]
     }
 ];

@@ -118,6 +118,11 @@
             <br>
             <button type="button" id='getRating' class="btn btn-default" style="margin-bottom: 20px">Submit</button>
             <br>
+
+            <footer>
+                <a href="/api/friends" id="getFriendsList">API Friends List </a>
+                <a href='https://github.com/AnastasiaFef/friend_finder' id="getGithub">GitHub Repo</a>
+            </footer>
         
             <!-- The Modal -->
             <div id="myModal" class="modal" style="display: none;">
@@ -142,21 +147,33 @@
                 $(function () {
                     $(".rateYo").rateYo({
                         starWidth: "30px",
+                        rating: 3
                     });
                 });
                 $(function () {
                     //   var $rateYo = $("#rateYo").rateYo();
                     $("#getRating").click(function () {
                         /* get rating */
-                        var rating = $(".rateYo").rateYo("option", "rating");
+                        var ratingInt = $(".rateYo").rateYo("option", "rating");
+                        console.log(ratingInt, ' - ratingIng');
+                        var rating = [];
+                        ratingInt.forEach(element => {
+                            rating.push(parseInt(element));
+                            console.log("Pushing this: ", parseInt(element))
+                            console.log('Rating inside loop: ', rating)
+                        });
+                        console.log(rating, " - array formed");
                         if(rating.indexOf(0)>-1){
-                            return window.alert('Please fill out all fields')
+                            return ohOh();
                         }
                         if(($('#name').val())==''){
-                            return window.alert('Please fill out all fields')
+                            return ohOh();
                         }
                         if(($('#img-url').val())==''){
-                            return window.alert('Please fill out all fields')
+                            return ohOh();
+                        }
+                        function ohOh(){
+                            window.alert('Please fill out all fields');
                         }
                         var user_input = {};
                         user_input.name = $('#name').val();

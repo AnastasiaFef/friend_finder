@@ -14,5 +14,3 @@ require('./app/routing/apiRoutes.js')(app);
 app.listen(PORT, function(){
     console.log('App listens on PORT: ', PORT);
 })
-
-

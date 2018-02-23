@@ -162,16 +162,15 @@
                         user_input.name = $('#name').val();
                         user_input.photo = $('#img-url').val();
                         user_input.scores = rating;
-                        console.log(user_input)
 
-                        $.post('/api/friends', user_input, function(data){
-                            console.log('post data ', data)
-                        }).done(function(res){
+                        $.post('/api/friends', user_input, function(res){
+                            // console.log('post data ', data)
+                        // }).done(function(res){
                             var modal = $('.modal');
                             $("#matchName").text(res.name);
                             $("#matchPic").attr('src', res.photo)
 
-                            console.log(res.name,' and ', res.photo)
+                            // console.log(res.name,' and ', res.photo)
                             // When the user clicks on the button, open the modal 
                             modal.attr('style','display: block');
 
